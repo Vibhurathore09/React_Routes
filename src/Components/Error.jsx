@@ -1,9 +1,14 @@
 import React from "react";
-
+import { useNavigate, Link } from "react-router-dom";
 const Error = () => {
+  const navigate = useNavigate();
   return (
     <div>
-      <h1 style={{ color: "red" }}>Error</h1>
+      <div>404 page not Found</div>
+      <Link>
+        <button onClick={() => navigate(-1)}>GO back</button>
+      </Link>
+      <h2 style={{ color: "red" }}>Error</h2>
     </div>
   );
 };
